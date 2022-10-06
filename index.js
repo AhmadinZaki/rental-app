@@ -7,12 +7,13 @@ const app = express();
 app.use(bodyParser.json());
 
 // import routes
-const userRoute = require('./routes/User')
+const userRoute = require('./routes/User');
+const mobilRoutes = require('./routes/Mobil');
 
 
 
 app.use('/User', userRoute);
-
+app.use('/Mobil', mobilRoutes);
 
 // ROUTES
 app.get('/', (req,res) => {
